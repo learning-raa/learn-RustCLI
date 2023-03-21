@@ -2,25 +2,26 @@
 
 use clap::Parser;
 
-use std::env;
 
 fn main() {
-    println!("Hello, cli world!");
-
-    for item in env::args() {
-        println!("item: {}", item);
-    }
-
     println!("parser intro");
 
-    let args = FirstCLI::parse();
-    println!("{} -> {}", args.command, args. value);
+    let args = CliArgs::parse();
+    println!("{} -> {}", args.commandName, args.value);
+    println!("{} -> {}", args.uflA, args.wflB);
 }
 
 
 #[derive(Parser)]
-struct FirstCLI {
-    command: String,
-    value: i64,
+#[command(about)]
+struct CliArgs {
+    //#[arg(short,long)]
+    commandName: String,
+    #[arg(short,long, default_value_t = 0)]
+    value: u8,
+    #[arg(short,long, default_value_t = false)]
+    uflA: bool,
+    #[arg(short,long, default_value_t = false)]
+    wflB: bool,
 }
 
