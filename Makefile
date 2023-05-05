@@ -8,7 +8,7 @@ run: release size
 	@./target/release/$(binname)
 
 edit:
-	@vi ./src/main.rs
+	@nvim ./src/main.rs
 
 savetogit:
 	@git add . && git commit -m 'saving' && git push
