@@ -12,7 +12,6 @@ fn main() {
     println!("mOtp -> {}", args.mOpt );
 }
 
-
 #[derive(Parser)]
 #[command(about)]
 struct CliArgs {
