@@ -7,7 +7,7 @@ edit:
 	@nvim ./src/main.rs
 
 run: release size
-	@./target/release/$(binname)
+	@./target/release/$(binname) -h
 release:
 	@cargo rustc --release -- -C prefer-dynamic
 test:

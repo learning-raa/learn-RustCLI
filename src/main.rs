@@ -8,8 +8,8 @@ fn main() {
 
     let args = CliArgs::parse();
     println!("{} -> {}", args.commandName, args.value);
-    println!("{} -> {}", args.uflA, args.wflB);
-    println!("mOtp -> {}", args.mOpt );
+    println!("{} -> {}", args.uflA, args.wflBCDe);
+    println!("mOtp -> {}", args.mOptCam );
 }
 
 #[derive(Parser)]
@@ -22,8 +22,8 @@ struct CliArgs {
     #[arg(short,long, default_value_t = false)]
     uflA: bool,
     #[arg(short,long, default_value_t = false)]
-    wflB: bool,
+    wflBCDe: bool,
     #[arg(short,long, default_value_t = false)]
-    mOpt: bool,
+    mOptCam: bool,
 }
 
