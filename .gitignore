@@ -1,6 +1,8 @@
 /target
 /src/*.swp
 
+#Mac
+.DS_Store
 
 # Added by cargo
 #
