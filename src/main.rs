@@ -13,7 +13,7 @@ fn main() {
 }
 
 #[derive(Parser)]
-#[command(about)]
+#[command(version, about)]
 struct CliArgs {
     //#[arg(short,long)]
     commandName: String,
